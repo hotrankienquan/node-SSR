@@ -1,0 +1,2 @@
+đây là file cho bên ngoài access vào
+http://localhost:8080/test.txt
