@@ -2,6 +2,7 @@
 import express from 'express';
 import configViewengine from './config/viewengine';
 import initWebRoute from './routes/web'
+import APIRoute from './routes/api'
 import connection from './config/connectDb'
 require('dotenv').config();
 const app = express()
@@ -12,6 +13,7 @@ app.use(express.urlencoded({ extended: true })); // tương tự dùng bodyParse
 configViewengine(app);
 const port = process.env.PORT || 8081;
 initWebRoute(app)
+APIRoute(app)
 // app.get('/', (req, res) => {
 //   // res.send('Hello World! ')
 //   res.render('index.ejs')
