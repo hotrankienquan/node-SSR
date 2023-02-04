@@ -1,4 +1,4 @@
-import pool from "../config/connectDb";
+const pool = require('../config/connectDb')
 
 let getAllUsers = async (req, res) => {
   const [rows, fields] = await pool.execute('select * from users');

@@ -1,5 +1,7 @@
-import express from 'express'
-import APIController from '../controllers/APIController'
+// import express from 'express'
+const express  = require('express')
+const APIController = require('../controllers/APIController')
+// import APIController from '../controllers/APIController'
 const router = express.Router()
 const APIRoute = (app) => {
 

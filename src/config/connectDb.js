@@ -7,6 +7,11 @@ const pool = mysql.createPool({
   user: 'root',
   database: 'hoidanit'
 });
+// const pool = mysql.createPool({
+//   host: 'localhost',
+//   user: 'kienquan_kienquan',
+//   database: 'kienquan_nodejs'
+// });
 
 // simple query
 // connection.query(
@@ -25,4 +30,4 @@ const pool = mysql.createPool({
 //     console.log(results);
 //   }
 // );
-export default pool;
+module.exports = pool;

@@ -1,9 +1,9 @@
-// const express = require('express')
-import express from 'express';
-import configViewengine from './config/viewengine';
-import initWebRoute from './routes/web'
-import APIRoute from './routes/api'
-import connection from './config/connectDb'
+const express = require('express')
+// import express from 'express';
+const configViewengine = require('./src/config/viewengine')
+const initWebRoute = require('./src/routes/web')
+const APIRoute = require('./src/routes/api')
+const connection = require('./src/config/connectDb')
 require('dotenv').config();
 const app = express()
 app.use(express.json());
@@ -14,10 +14,7 @@ configViewengine(app);
 const port = process.env.PORT || 8081;
 initWebRoute(app)
 APIRoute(app)
-// app.get('/', (req, res) => {
-//   // res.send('Hello World! ')
-//   res.render('index.ejs')
-// })
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
